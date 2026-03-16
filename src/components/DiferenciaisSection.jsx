@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styled from 'styled-components'
@@ -182,16 +182,48 @@ export default function DiferenciaisSection() {
   const topRef = useRef(null)
   const cardsRef = useRef([])
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(topRef.current.children, {
-        scrollTrigger: { trigger: topRef.current, start: 'top 82%', toggleActions: 'play none none none' },
-        opacity: 0, y: 36, duration: 0.7, stagger: 0.12, ease: 'power3.out',
-      })
-      gsap.from(cardsRef.current, {
-        scrollTrigger: { trigger: cardsRef.current[0], start: 'top 82%', toggleActions: 'play none none none' },
-        opacity: 0, y: 48, duration: 0.75, stagger: 0.14, ease: 'power3.out',
-      })
+      const topChildren = Array.from(topRef.current?.children || [])
+      const cards = cardsRef.current.filter(Boolean)
+
+      if (topChildren.length) {
+        gsap.fromTo(
+          topChildren,
+          { autoAlpha: 0, y: 36 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: topRef.current,
+              start: 'top 82%',
+              once: true,
+            },
+          },
+        )
+      }
+
+      if (cards.length) {
+        gsap.fromTo(
+          cards,
+          { autoAlpha: 0, y: 48 },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.75,
+            stagger: 0.14,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: cards[0],
+              start: 'top 82%',
+              once: true,
+            },
+          },
+        )
+      }
     }, sectionRef)
     return () => ctx.revert()
   }, [])
