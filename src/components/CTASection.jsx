@@ -92,26 +92,9 @@ const Schedule = styled.p`
 `
 
 const ActionBlock = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 100%;
-  max-width: 560px;
-  margin-left: auto;
-  padding: 24px;
-  border-radius: 3px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background-image:
-    linear-gradient(150deg, rgba(10,10,10,0.82), rgba(10,10,10,0.58)),
-    url('/noiva-te020.jpg');
-  background-size: cover;
-  background-position: center;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    max-width: 100%;
-    margin-left: 0;
-  }
 `
 
 const BtnPrimary = styled.a`
