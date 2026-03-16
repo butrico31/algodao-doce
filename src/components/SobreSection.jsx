@@ -114,11 +114,7 @@ const CTAButton = styled.a`
 
 const VisualBlock = styled.div`
   position: relative;
-  background-image:
-    linear-gradient(135deg, rgba(8,8,8,0.82), rgba(8,8,8,0.62)),
-    url('/vestido_festa_rosa-bebe.jpg');
-  background-size: cover;
-  background-position: top;
+  background: linear-gradient(135deg, ${({ theme }) => theme.colors.black}, ${({ theme }) => theme.colors.brownCoffee});
   padding: 64px 52px;
   display: grid;
   grid-template-columns: 1fr 1fr;
