@@ -85,6 +85,11 @@ const InfoTag = styled.span`
   background: ${({ theme }) => theme.colors.white};
 `
 
+const CTAWrap = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`
+
 const CTAButton = styled.a`
   display: inline-flex;
   align-items: center;
@@ -109,7 +114,11 @@ const CTAButton = styled.a`
 
 const VisualBlock = styled.div`
   position: relative;
-  background: ${({ theme }) => theme.colors.black};
+  background-image:
+    linear-gradient(135deg, rgba(8,8,8,0.82), rgba(8,8,8,0.62)),
+    url('/vestido_festa_rosa-bebe.jpg');
+  background-size: cover;
+  background-position: top;
   padding: 64px 52px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -130,6 +139,8 @@ const VisualBlock = styled.div`
 `
 
 const StatBox = styled.div`
+  position: relative;
+  z-index: 1;
   padding: 32px 24px;
   background: ${({ $dark, theme }) => $dark ? 'rgba(255,255,255,0.03)' : 'transparent'};
 
@@ -194,21 +205,23 @@ export default function SobreSection() {
             Na Algodão Doce Noivas, acreditamos que cada ocasião merece um vestido especial.
             Nossas costureiras dedicadas há mais de 20 anos transformam o aluguel em uma
             experiência única — porque você merece se sentir incrível em cada momento
-            marcante da sua vida.�?" porque você merece se sentir incrível em cada momento
+            marcante da sua vida?" porque você merece se sentir incrível em cada momento
             marcante da sua vida.
           </Body>
           <InfoRow>
             <InfoTag><FaMapMarkerAlt size={12} /> Itapira / SP</InfoTag>
             <InfoTag>Atendimento Estadual</InfoTag>
           </InfoRow>
-          <CTAButton
-            href="https://wa.me/5519996141072?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Algod%C3%A3o%20Doce%20Noivas."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaWhatsapp size={15} />
-            Agende seu Horário
-          </CTAButton>
+          <CTAWrap>
+            <CTAButton
+              href="https://wa.me/5519996141072?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Algod%C3%A3o%20Doce%20Noivas."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp size={15} />
+              Agende seu Horário
+            </CTAButton>
+          </CTAWrap>
         </TextBlock>
 
         <VisualBlock ref={visualRef}>

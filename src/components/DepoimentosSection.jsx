@@ -222,7 +222,7 @@ export default function DepoimentosSection() {
           <RightCol>
             <QuoteBlock ref={quoteRef}>
               <QuoteText>{testimonials[active].text}</QuoteText>
-              <QuoteAuthor>�?" {testimonials[active].author}</QuoteAuthor>
+              <QuoteAuthor>-" {testimonials[active].author}</QuoteAuthor>
             </QuoteBlock>
             <OrangeAccent />
           </RightCol>

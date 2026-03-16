@@ -1,7 +1,7 @@
-import { useEffect, useRef } from 'react';
+﻿import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import styled from 'styled-components';
-import { FaWhatsapp, FaArrowRight } from 'react-icons/fa';
+import { FaWhatsapp, FaArrowRight, FaStar } from 'react-icons/fa';
 
 /* �"?�"?�"? Layout �"?�"?�"? */
 const Section = styled.section`
@@ -188,6 +188,17 @@ const Right = styled.div`
   }
 `;
 
+const HeroPhoto = styled.div`
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(120deg, rgba(10,10,10,0.7), rgba(10,10,10,0.38) 45%, rgba(10,10,10,0.7)),
+    url('/noiva-ez017.jpg');
+  background-size: cover;
+  background-position: center 22%;
+  z-index: 0;
+`;
+
 const BigLetter = styled.div`
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: clamp(180px, 22vw, 280px);
@@ -352,8 +363,8 @@ export default function Hero() {
           <em>vestido perfeito</em>
         </Headline>
         <Sub className="hero-sub">
-          Aluguel de vestidos de festa com atendimento personalizado e costureiras
-          que transformam momentos em mem�rias inesquec�veis.
+          Aluguel de vestidos de noivas e festa com atendimento personalizado e costureiras
+          que transformam momentos em memórias inesquecíveis.
         </Sub>
         <BtnRow className="hero-btns">
           <BtnPrimary
@@ -379,13 +390,14 @@ export default function Hero() {
             <StatLabel>Vestidos no acervo</StatLabel>
           </StatItem>
           <StatItem>
-            <StatNum>�^z</StatNum>
+            <StatNum>4.9<span><FaStar size={15} /></span></StatNum>
             <StatLabel>Amor por cada cliente</StatLabel>
           </StatItem>
         </Stats>
       </Left>
 
       <Right ref={rightRef}>
+        <HeroPhoto />
         <GridLines />
         <BigLetter>A</BigLetter>
         <RightContent>
@@ -396,7 +408,7 @@ export default function Hero() {
           <OrangeLine />
           <RightBadge>
             <RightBadgeText>
-              <span className="num">4.9�~.</span>
+              <span className="num">4.9<FaStar size={15} /></span>
               <span className="label">Avaliação das clientes</span>
             </RightBadgeText>
           </RightBadge>
