@@ -86,7 +86,7 @@ const GalleryItem = styled.div`
   overflow: hidden;
   border-radius: 2px;
   cursor: pointer;
-  background: ${({ $gradient }) => $gradient};
+  background: ${({ theme }) => theme.colors.lightGray};
   aspect-ratio: ${({ $ratio }) => $ratio};
   will-change: transform;
 
@@ -108,13 +108,13 @@ const GalleryItem = styled.div`
   .inner-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0);
+    background: linear-gradient(180deg, rgba(22,11,8,0.12) 0%, rgba(22,11,8,0.4) 100%);
     transition: background 0.4s ease;
     z-index: 1;
   }
 
   &:hover .inner-overlay {
-    background: rgba(200,168,130,0.15);
+    background: linear-gradient(180deg, rgba(22,11,8,0.2) 0%, rgba(22,11,8,0.52) 100%);
   }
 
   &:hover .inner-img {
@@ -124,7 +124,9 @@ const GalleryItem = styled.div`
   .inner-img {
     position: absolute;
     inset: 0;
-    background: inherit;
+    background-image: ${({ $image }) => `url(${$image})`};
+    background-size: cover;
+    background-position: top ${({ $focusY = '18%' }) => $focusY};
     transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
@@ -134,11 +136,11 @@ const GalleryItem = styled.div`
 `
 
 const items = [
-  { label: 'Vestido Noiva', ratio: '3/4', gradient: 'linear-gradient(160deg, #1a0c09 0%, #4a2a1c 50%, #7a5240 100%)' },
-  { label: 'Vestido Formatura', ratio: '4/3', gradient: 'linear-gradient(160deg, #2a1408 0%, #6a3820 60%, #a87c50 100%)' },
-  { label: 'Vestido Debutante', ratio: '4/3', gradient: 'linear-gradient(160deg, #3d1a10 0%, #8b5c3a 60%, #c4a882 100%)' },
-  { label: 'Vestido Social', ratio: '4/3', gradient: 'linear-gradient(160deg, #160b06 0%, #4a2018 60%, #8a6040 100%)' },
-  { label: 'Vestido Madrinha', ratio: '4/3', gradient: 'linear-gradient(160deg, #221008 0%, #6a3820 60%, #c08060 100%)' },
+  { label: 'Vestido Noiva', ratio: '3/4', image: '/noiva-ez017.jpg', focusY: '14%' },
+  { label: 'Vestido Formatura', ratio: '4/3', image: '/vestido_festa_azul.jpg', focusY: '18%' },
+  { label: 'Vestido Debutante', ratio: '4/3', image: '/vestido_festa_rosa-bebe.jpg', focusY: '16%' },
+  { label: 'Vestido Social', ratio: '4/3', image: '/noiva-ez002.jpg', focusY: '20%' },
+  { label: 'Vestido Madrinha', ratio: '4/3', image: '/vestido-madrinha.webp', focusY: '18%' },
 ]
 
 export default function GaleriaSection() {
@@ -174,7 +176,7 @@ export default function GaleriaSection() {
         </TopRow>
         <Grid ref={gridRef}>
           {items.map((item, i) => (
-            <GalleryItem key={i} $ratio={item.ratio} $gradient={item.gradient}>
+            <GalleryItem key={i} $ratio={item.ratio} $image={item.image} $focusY={item.focusY}>
               <div className="inner-img" />
               <div className="inner-overlay" />
               <span className="inner-label">{item.label}</span>
