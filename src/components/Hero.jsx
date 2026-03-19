@@ -223,22 +223,43 @@ const RightContent = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
 `;
 
 const TagPill = styled.div`
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 2px;
-  padding: 10px 20px;
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-  font-weight: 600;
+  padding: 12px 22px;
+  max-width: min(92vw, 420px);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 8px 12px;
+  }
+`;
+
+const TagLogo = styled.img`
+  width: clamp(220px, 24vw, 320px);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: min(72vw, 250px);
+    height: auto;
+  }
 `;
 
 const HeroQuote = styled.p`
@@ -401,7 +422,9 @@ export default function Hero() {
         <GridLines />
         <BigLetter>A</BigLetter>
         <RightContent>
-          <TagPill>Algodão Doce Noivas</TagPill>
+          <TagPill>
+            <TagLogo src="/LogoPreta.png" alt="Algodão Doce Noivas" />
+          </TagPill>
           <HeroQuote>
             Cada vestido conta uma história especial
           </HeroQuote>

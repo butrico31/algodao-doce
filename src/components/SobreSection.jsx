@@ -9,6 +9,10 @@ gsap.registerPlugin(ScrollTrigger)
 const Section = styled.section`
   background: ${({ theme }) => theme.colors.cream};
   padding: 112px 32px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 88px 20px;
+  }
 `
 
 const Container = styled.div`
@@ -120,6 +124,8 @@ const VisualBlock = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   background-clip: padding-box;
+  width: 100%;
+  box-sizing: border-box;
 
   &::after {
     content: '';
@@ -131,6 +137,18 @@ const VisualBlock = styled.div`
     border: 1px solid rgba(0,0,0,0.08);
     z-index: -1;
     border-radius: 1px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    padding: 42px 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 24px 18px;
+
+    &::after {
+      display: none;
+    }
   }
 `
 
@@ -160,6 +178,19 @@ const StatBox = styled.div`
     color: rgba(255,255,255,0.35);
     font-weight: 600;
     line-height: 1.5;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 20px 14px;
+
+    .stat-num {
+      font-size: clamp(2.2rem, 10vw, 2.8rem);
+    }
+
+    .stat-label {
+      font-size: 0.58rem;
+      letter-spacing: 1.4px;
+    }
   }
 `
 

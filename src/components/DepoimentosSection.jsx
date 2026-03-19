@@ -8,6 +8,10 @@ gsap.registerPlugin(ScrollTrigger)
 const Section = styled.section`
   background: ${({ theme }) => theme.colors.white};
   padding: 112px 32px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 88px 20px;
+  }
 `
 
 const Container = styled.div`
@@ -24,6 +28,10 @@ const Layout = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    gap: 28px;
   }
 `
 
@@ -57,6 +65,10 @@ const SectionTitle = styled.h2`
   line-height: 1.12;
   letter-spacing: -0.02em;
   margin-bottom: 48px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    margin-bottom: 28px;
+  }
 `
 
 const Cards = styled.div`
@@ -97,6 +109,24 @@ const TestimonialCard = styled.button`
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    padding: 22px 18px;
+
+    p:first-child {
+      font-size: 0.68rem;
+      letter-spacing: 1.2px;
+    }
+
+    p:last-child {
+      white-space: normal;
+      overflow: visible;
+      text-overflow: unset;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
 `
 
 const RightCol = styled.div`
@@ -125,6 +155,17 @@ const QuoteBlock = styled.div`
     pointer-events: none;
     user-select: none;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    min-height: 300px;
+    padding: 44px 18px 38px;
+
+    &::before {
+      top: 10px;
+      left: 16px;
+      font-size: 4.2rem;
+    }
+  }
 `
 
 const QuoteText = styled.p`
@@ -136,6 +177,13 @@ const QuoteText = styled.p`
   margin-bottom: 28px;
   position: relative;
   z-index: 1;
+  overflow-wrap: anywhere;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
 `
 
 const QuoteAuthor = styled.p`
@@ -145,6 +193,11 @@ const QuoteAuthor = styled.p`
   letter-spacing: 2px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.orange};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 0.66rem;
+    letter-spacing: 1.4px;
+  }
 `
 
 const OrangeAccent = styled.div`
