@@ -44,9 +44,9 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
-  letter-spacing: 3.5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.orange};
   margin-bottom: 24px;
@@ -164,9 +164,13 @@ const StatNum = styled.p`
 
 const StatLabel = styled.p`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.72rem;
+  font-size: 0.84rem;
   color: ${({ theme }) => theme.colors.textMedium};
-  letter-spacing: 0.5px;
+  letter-spacing: 0.35px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 0.78rem;
+  }
 `;
 
 /* �"?�"?�"? Right column �"?�"?�"? */
@@ -309,11 +313,16 @@ const RightBadgeText = styled.div`
     line-height: 1;
   }
   .label {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
+    font-size: 0.9rem;
+    letter-spacing: 1.6px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.45);
     font-weight: 600;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+      font-size: 0.82rem;
+      letter-spacing: 1.2px;
+    }
   }
 `;
 
