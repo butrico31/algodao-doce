@@ -33,22 +33,20 @@ const TopBar = styled.div`
 
 const BrandCol = styled.div``
 
-const LogoName = styled.p`
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 1.15rem;
-  color: ${({ theme }) => theme.colors.white};
-  font-weight: 700;
-  font-style: italic;
-  margin-bottom: 6px;
+const LogoWrap = styled.div`
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 `
 
-const LogoSub = styled.p`
-  font-size: 0.65rem;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.orange};
-  font-weight: 600;
-  margin-bottom: 20px;
+const LogoImage = styled.img`
+  width: 170px;
+  height: 64px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0) invert(1);
 `
 
 const BrandDesc = styled.p`
@@ -172,8 +170,9 @@ export default function Footer() {
       <Container>
         <TopBar>
           <BrandCol>
-            <LogoName>Algodão Doce Noivas</LogoName>
-            <LogoSub>Itapira / SP</LogoSub>
+            <LogoWrap>
+              <LogoImage src="/LogoPreta.png" alt="Algodão Doce Noivas" />
+            </LogoWrap>
             <BrandDesc>Realizando sonhos, um vestido de cada vez. Mais de 20 anos de dedicação ao bem vestir.</BrandDesc>
             <SocialRow>
               <SocialIcon href="https://www.instagram.com/algodaodocenoivasitapira" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -201,11 +200,11 @@ export default function Footer() {
             <ColTitle>Contato</ColTitle>
             <ContactList>
               <ContactItem>
-                <FaWhatsapp size={12} />
+                <FaWhatsapp size={18} />
                 <span>(19) 99614-1072</span>
               </ContactItem>
               <ContactItem>
-                <FaInstagram size={12} />
+                <FaInstagram size={18} />
                 <span>@algodaodocenoivasitapira</span>
               </ContactItem>
             </ContactList>

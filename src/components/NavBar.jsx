@@ -35,27 +35,18 @@ const Inner = styled.div`
 
 const LogoBlock = styled.a`
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
   text-decoration: none;
 `;
 
-const LogoName = styled.span`
-  font-family: ${({ theme }) => theme.fonts.heading};
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.black};
-  letter-spacing: -0.02em;
-`;
+const LogoImage = styled.img`
+  width: 170px;
+  height: auto;
+  display: block;
 
-const LogoSub = styled.span`
-  font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.6rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.orange};
-  font-weight: 600;
-  margin-top: 2px;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    width: 142px;
+  }
 `;
 
 const Links = styled.ul`
@@ -197,8 +188,7 @@ export default function Navbar() {
       <Nav $scrolled={scrolled}>
         <Inner>
           <LogoBlock href="#inicio">
-            <LogoName>Algodão Doce</LogoName>
-            <LogoSub>Noivas · Itapira/SP</LogoSub>
+            <LogoImage src="/LogoPreta.png" alt="Algodão Doce Noivas" />
           </LogoBlock>
 
           <Links $open={menuOpen}>
