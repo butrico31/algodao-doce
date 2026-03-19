@@ -403,7 +403,7 @@ export default function Hero() {
         </BtnRow>
         <Stats className="hero-stats">
           <StatItem>
-            <StatNum>20<span>+</span></StatNum>
+            <StatNum>30<span>+</span></StatNum>
             <StatLabel>Anos de experiência</StatLabel>
           </StatItem>
           <StatItem>
