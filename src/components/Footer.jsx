@@ -51,7 +51,7 @@ const LogoImage = styled.img`
 
 const BrandDesc = styled.p`
   font-size: 0.82rem;
-  color: rgba(255,255,255,0.35);
+  color: #fff;
   line-height: 1.7;
   max-width: 260px;
   margin-bottom: 24px;
@@ -70,7 +70,7 @@ const SocialIcon = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255,255,255,0.4);
+  color: #fff;
   font-size: 0.9rem;
   transition: all 0.25s;
 
@@ -89,7 +89,7 @@ const ColTitle = styled.h4`
   font-size: 0.65rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: #fff;
   font-weight: 600;
   margin-bottom: 20px;
 `
@@ -103,7 +103,7 @@ const NavList = styled.ul`
 const NavItem = styled.li`
   a {
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.45);
+    color: #fff;
     text-decoration: none;
     transition: color 0.25s;
 
@@ -126,7 +126,7 @@ const ContactItem = styled.li`
 
   span {
     font-size: 0.82rem;
-    color: rgba(255,255,255,0.45);
+    color: #fff;
     line-height: 1.55;
   }
 `
@@ -141,7 +141,7 @@ const BottomBar = styled.div`
 
 const Copyright = styled.p`
   font-size: 0.72rem;
-  color: rgba(255,255,255,0.2);
+  color: #fff;
 `
 
 const OrangeTag = styled.div`

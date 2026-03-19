@@ -101,7 +101,7 @@ const TestimonialCard = styled.button`
   p:last-child {
     font-family: ${({ theme }) => theme.fonts.subtitle};
     font-size: 0.92rem;
-    color: ${({ $active, theme }) => $active ? 'rgba(255,255,255,0.7)' : theme.colors.textMedium};
+    color: ${({ $active, theme }) => $active ? '#fff' : theme.colors.textMedium};
     line-height: 1.6;
     font-style: italic;
     transition: color 0.3s ease;
@@ -171,7 +171,7 @@ const QuoteBlock = styled.div`
 const QuoteText = styled.p`
   font-family: ${({ theme }) => theme.fonts.subtitle};
   font-size: clamp(1.1rem, 2vw, 1.4rem);
-  color: rgba(255,255,255,0.9);
+  color: #fff;
   line-height: 1.75;
   font-style: italic;
   margin-bottom: 28px;

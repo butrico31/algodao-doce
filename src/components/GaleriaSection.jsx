@@ -100,7 +100,7 @@ const GalleryItem = styled.div`
     font-size: 0.65rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.6);
+    color: #fff;
     font-weight: 600;
     z-index: 2;
   }

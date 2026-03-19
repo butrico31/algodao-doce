@@ -78,7 +78,7 @@ const Headline = styled.h2`
 const Sub = styled.p`
   font-family: ${({ theme }) => theme.fonts.subtitle};
   font-size: 1.05rem;
-  color: rgba(255,255,255,0.55);
+  color: #fff;
   line-height: 1.75;
   margin-bottom: 12px;
 `
@@ -87,7 +87,7 @@ const Schedule = styled.p`
   font-size: 0.7rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
+  color: #fff;
   font-weight: 600;
 `
 
@@ -138,7 +138,7 @@ const BtnSecondary = styled.a`
   align-items: center;
   gap: 16px;
   background: rgba(255,255,255,0.05);
-  color: rgba(255,255,255,0.75);
+  color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: 0.95rem;
   font-weight: 500;
@@ -165,7 +165,7 @@ const BtnSecondary = styled.a`
   .btn-sub {
     font-size: 0.7rem;
     font-weight: 400;
-    opacity: 0.6;
+    opacity: 1;
   }
 `
 
@@ -175,7 +175,7 @@ const BtnTertiary = styled.a`
   align-items: center;
   gap: 16px;
   background: transparent;
-  color: rgba(255,255,255,0.4);
+  color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: 0.85rem;
   font-weight: 400;
@@ -185,7 +185,7 @@ const BtnTertiary = styled.a`
   border: 1px solid rgba(255,255,255,0.07);
   transition: color 0.25s;
 
-  &:hover { color: rgba(255,255,255,0.7); }
+  &:hover { color: #fff; }
 
   svg { flex-shrink: 0; align-self: center; }
 `

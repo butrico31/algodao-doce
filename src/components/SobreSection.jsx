@@ -175,7 +175,7 @@ const StatBox = styled.div`
     font-size: 0.65rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
+    color: #fff;
     font-weight: 600;
     line-height: 1.5;
   }

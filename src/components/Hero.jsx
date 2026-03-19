@@ -240,8 +240,8 @@ const TagPill = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.28);
   border-radius: 2px;
   padding: 12px 22px;
   max-width: min(92vw, 420px);
@@ -258,7 +258,7 @@ const TagLogo = styled.img`
   object-fit: contain;
   display: block;
   filter: brightness(0) invert(1);
-  opacity: 0.85;
+  opacity: 1;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     width: min(72vw, 250px);
@@ -316,7 +316,7 @@ const RightBadgeText = styled.div`
     font-size: 0.9rem;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.45);
+    color: #fff;
     font-weight: 600;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
