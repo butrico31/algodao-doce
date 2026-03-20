@@ -178,7 +178,7 @@ export default function Footer() {
               <SocialIcon href="https://www.instagram.com/algodaodocenoivasitapira" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </SocialIcon>
-              <SocialIcon href="https://www.facebook.com/algodaodocenoivas" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <SocialIcon href="https://www.facebook.com/algodaodocenoivasitapira" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook />
               </SocialIcon>
               <SocialIcon href="https://wa.me/5519996141072" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
