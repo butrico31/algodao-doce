@@ -101,7 +101,7 @@ const Sub = styled.p`
   margin-bottom: 44px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1.08rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -120,7 +120,7 @@ const BtnPrimary = styled.a`
   background: ${({ theme }) => theme.colors.orange};
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 3px;
@@ -135,7 +135,7 @@ const BtnPrimary = styled.a`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -146,7 +146,7 @@ const BtnSecondary = styled.a`
   background: transparent;
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   padding: 15px 24px;
   border: 1.5px solid rgba(0,0,0,0.15);
@@ -160,7 +160,7 @@ const BtnSecondary = styled.a`
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 `;
 
