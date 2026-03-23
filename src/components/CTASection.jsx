@@ -99,18 +99,13 @@ const Schedule = styled.p`
 const ActionBlock = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0;
-
-  > a + a {
-    margin-top: 12px;
-  }
+  gap: 18px;
 `
 
 const BtnPrimary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  min-height: 86px;
   align-items: center;
   gap: 16px;
   background: ${({ theme }) => theme.colors.orange};
@@ -147,7 +142,6 @@ const BtnSecondary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  min-height: 86px;
   align-items: center;
   gap: 16px;
   background: rgba(255,255,255,0.05);
@@ -186,21 +180,38 @@ const BtnTertiary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
-  min-height: 86px;
   align-items: center;
   gap: 16px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 20px 32px;
   border-radius: 3px;
   text-decoration: none;
   border: 1px solid rgba(255,255,255,0.1);
-  transition: color 0.25s;
+  transition: background 0.25s, color 0.25s, transform 0.2s;
 
-  &:hover { color: #fff; }
+  &:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    transform: translateX(4px);
+  }
+
+  svg { flex-shrink: 0; font-size: 1.3rem; align-self: center; }
+
+  .btn-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .btn-sub {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 1;
+  }
 
   svg { flex-shrink: 0; align-self: center; }
 `
