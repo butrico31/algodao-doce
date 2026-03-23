@@ -94,7 +94,7 @@ const Headline = styled.h1`
 
 const Sub = styled.p`
   font-family: ${({ theme }) => theme.fonts.subtitle};
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.colors.textMedium};
   line-height: 1.8;
   max-width: 420px;
@@ -102,7 +102,7 @@ const Sub = styled.p`
   margin-bottom: 44px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 `;
 
