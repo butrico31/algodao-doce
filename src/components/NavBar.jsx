@@ -74,7 +74,7 @@ const Links = styled.ul`
 
 const NavLink = styled.a`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.83rem;
+  font-size: 1rem;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.textMedium};
   letter-spacing: 0.3px;
@@ -111,7 +111,7 @@ const CTABtn = styled.a`
   background: ${({ theme }) => theme.colors.orange};
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   padding: 10px 20px;

@@ -36,7 +36,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -49,6 +49,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
   }
 `
 
@@ -74,7 +79,7 @@ const TotalBadge = styled.div`
     line-height: 1;
   }
   p:last-child {
-    font-size: 0.65rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(255,255,255,0.4);
@@ -105,7 +110,6 @@ const OccasionCard = styled.div`
   cursor: default;
   overflow: hidden;
   transition: background 0.4s ease;
-  group: true;
 
   &::before {
     content: '';
@@ -143,7 +147,7 @@ const OccasionTitle = styled.h3`
 `
 
 const OccasionCount = styled.p`
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.orange};
@@ -152,7 +156,7 @@ const OccasionCount = styled.p`
 `
 
 const OccasionDesc = styled.p`
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: rgba(255,255,255,0.4);
   line-height: 1.7;
 `

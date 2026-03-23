@@ -50,7 +50,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -63,6 +63,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.6px;
   }
 `
 
@@ -84,7 +89,7 @@ const Sub = styled.p`
 `
 
 const Schedule = styled.p`
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
   color: #fff;
@@ -105,7 +110,7 @@ const BtnPrimary = styled.a`
   background: ${({ theme }) => theme.colors.orange};
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 20px 32px;
   border-radius: 3px;
@@ -126,7 +131,7 @@ const BtnPrimary = styled.a`
     gap: 3px;
   }
   .btn-sub {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 400;
     opacity: 0.75;
   }
@@ -140,7 +145,7 @@ const BtnSecondary = styled.a`
   background: rgba(255,255,255,0.05);
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 20px 32px;
   border-radius: 3px;
@@ -163,7 +168,7 @@ const BtnSecondary = styled.a`
     gap: 3px;
   }
   .btn-sub {
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: 400;
     opacity: 1;
   }
@@ -177,7 +182,7 @@ const BtnTertiary = styled.a`
   background: transparent;
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 400;
   padding: 16px 32px;
   border-radius: 3px;

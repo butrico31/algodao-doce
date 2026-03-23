@@ -44,7 +44,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -59,9 +59,25 @@ const Eyebrow = styled.p`
     background: ${({ theme }) => theme.colors.orange};
     flex-shrink: 0;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.2px;
+  }
 `;
 
 const Headline = styled.h1`
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    .num {
+      font-size: 1.55rem;
+    }
+
+    .label {
+      font-size: 1rem;
+      letter-spacing: 1.2px;
+    }
+  }
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: clamp(2.8rem, 4.5vw, 5rem);
   font-weight: 700;
@@ -85,7 +101,7 @@ const Sub = styled.p`
   margin-bottom: 44px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 1rem;
+    font-size: 1.08rem;
   }
 `;
 
@@ -104,7 +120,7 @@ const BtnPrimary = styled.a`
   background: ${({ theme }) => theme.colors.orange};
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 3px;
@@ -117,6 +133,10 @@ const BtnPrimary = styled.a`
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(200,168,130,0.35);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+  }
 `;
 
 const BtnSecondary = styled.a`
@@ -126,7 +146,7 @@ const BtnSecondary = styled.a`
   background: transparent;
   color: ${({ theme }) => theme.colors.black};
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 15px 24px;
   border: 1.5px solid rgba(0,0,0,0.15);
@@ -137,6 +157,10 @@ const BtnSecondary = styled.a`
   &:hover {
     border-color: ${({ theme }) => theme.colors.black};
     color: ${({ theme }) => theme.colors.black};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
   }
 `;
 
@@ -164,12 +188,13 @@ const StatNum = styled.p`
 
 const StatLabel = styled.p`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.84rem;
+  font-size: 1rem;
   color: ${({ theme }) => theme.colors.textMedium};
   letter-spacing: 0.35px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 0.78rem;
+    font-size: 1rem;
+    line-height: 1.45;
   }
 `;
 
@@ -313,14 +338,20 @@ const RightBadgeText = styled.div`
     line-height: 1;
   }
   .label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     letter-spacing: 1.6px;
     text-transform: uppercase;
     color: #fff;
     font-weight: 600;
+  }
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-      font-size: 0.82rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    .num {
+      font-size: 1.55rem;
+    }
+
+    .label {
+      font-size: 1.05rem;
       letter-spacing: 1.2px;
     }
   }

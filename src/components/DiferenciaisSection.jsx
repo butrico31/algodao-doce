@@ -37,7 +37,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -50,6 +50,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.4px;
   }
 `
 
@@ -71,6 +76,10 @@ const SectionDesc = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}) {
     max-width: 100%;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.1rem;
   }
 `
 
@@ -148,12 +157,22 @@ const CardTitle = styled.h3`
   margin-bottom: 12px;
   line-height: 1.2;
   letter-spacing: -0.01em;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.35rem;
+    line-height: 1.25;
+  }
 `
 
 const CardText = styled.p`
-  font-size: 0.88rem;
+  font-size: 1rem;
   color: ${({ theme }) => theme.colors.textMedium};
   line-height: 1.8;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
 `
 
 const cards = [
@@ -161,7 +180,7 @@ const cards = [
     num: '01',
     icon: <FaCut />,
     title: 'Costureiras Experientes',
-    text: 'Mais de duas décadas de dedicação ao ofício, garantindo o ajuste perfeito para o seu corpo e ocasião.',
+    text: 'Mais de 30 anos de dedicação ao ofício, garantindo o ajuste perfeito para o seu corpo e ocasião.',
   },
   {
     num: '02',

@@ -42,7 +42,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -55,6 +55,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
   }
 `
 
@@ -89,7 +94,7 @@ const TestimonialCard = styled.button`
 
   p:first-child {
     font-family: ${({ theme }) => theme.fonts.body};
-    font-size: 0.72rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -100,7 +105,7 @@ const TestimonialCard = styled.button`
 
   p:last-child {
     font-family: ${({ theme }) => theme.fonts.subtitle};
-    font-size: 0.92rem;
+    font-size: 1rem;
     color: ${({ $active, theme }) => $active ? '#fff' : theme.colors.textMedium};
     line-height: 1.6;
     font-style: italic;
@@ -114,7 +119,7 @@ const TestimonialCard = styled.button`
     padding: 22px 18px;
 
     p:first-child {
-      font-size: 0.68rem;
+      font-size: 1rem;
       letter-spacing: 1.2px;
     }
 
@@ -180,7 +185,7 @@ const QuoteText = styled.p`
   overflow-wrap: anywhere;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 20px;
   }
@@ -188,14 +193,14 @@ const QuoteText = styled.p`
 
 const QuoteAuthor = styled.p`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.72rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.orange};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    font-size: 0.66rem;
+    font-size: 1rem;
     letter-spacing: 1.4px;
   }
 `

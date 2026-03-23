@@ -34,7 +34,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -47,6 +47,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
   }
 `
 
@@ -64,6 +69,10 @@ const SectionDesc = styled.p`
   color: ${({ theme }) => theme.colors.textMedium};
   line-height: 1.8;
   align-self: end;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1.1rem;
+  }
 `
 
 const Grid = styled.div`
@@ -97,7 +106,7 @@ const GalleryItem = styled.div`
     bottom: 20px;
     left: 20px;
     font-family: ${({ theme }) => theme.fonts.body};
-    font-size: 0.65rem;
+    font-size: 1rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
     color: #fff;
@@ -132,6 +141,11 @@ const GalleryItem = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
     &:nth-child(1) { min-height: 260px; }
+
+    .inner-label {
+      font-size: 1rem;
+      letter-spacing: 2px;
+    }
   }
 `
 

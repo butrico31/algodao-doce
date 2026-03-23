@@ -36,7 +36,7 @@ const Eyebrow = styled.p`
   align-items: center;
   gap: 10px;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 3.5px;
   text-transform: uppercase;
@@ -49,6 +49,11 @@ const Eyebrow = styled.p`
     width: 28px;
     height: 1.5px;
     background: ${({ theme }) => theme.colors.orange};
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+    letter-spacing: 2.5px;
   }
 `
 
@@ -78,7 +83,7 @@ const InfoRow = styled.div`
 
 const InfoTag = styled.span`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -101,7 +106,7 @@ const CTAButton = styled.a`
   background: ${({ theme }) => theme.colors.orange};
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 15px 30px;
   border-radius: 3px;
@@ -113,6 +118,10 @@ const CTAButton = styled.a`
     background: ${({ theme }) => theme.colors.orangeDark};
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(200,168,130,0.32);
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
   }
 `
 
@@ -172,7 +181,7 @@ const StatBox = styled.div`
 
   .stat-label {
     font-family: ${({ theme }) => theme.fonts.body};
-    font-size: 0.65rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #fff;
@@ -188,7 +197,7 @@ const StatBox = styled.div`
     }
 
     .stat-label {
-      font-size: 0.58rem;
+      font-size: 1rem;
       letter-spacing: 1.4px;
     }
   }
@@ -230,7 +239,7 @@ export default function SobreSection() {
           <Title>Uma história de amor por cada cliente</Title>
           <Body>
             Na Algodão Doce Noivas, acreditamos que cada ocasião merece um vestido especial.
-            Nossas costureiras dedicadas há mais de 20 anos transformam o aluguel em uma
+            Nossas costureiras dedicadas há mais de 30 anos transformam o aluguel em uma
             experiência única — porque você merece se sentir incrível em cada momento
             marcante da sua vida?" porque você merece se sentir incrível em cada momento
             marcante da sua vida.
@@ -253,7 +262,7 @@ export default function SobreSection() {
 
         <VisualBlock ref={visualRef}>
           <StatBox>
-            <span className="stat-num">20<span>+</span></span>
+            <span className="stat-num">30<span>+</span></span>
             <span className="stat-label">Anos de experiência</span>
           </StatBox>
           <StatBox $dark>

@@ -50,11 +50,15 @@ const LogoImage = styled.img`
 `
 
 const BrandDesc = styled.p`
-  font-size: 0.82rem;
+  font-size: 1rem;
   color: #fff;
   line-height: 1.7;
   max-width: 260px;
   margin-bottom: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    font-size: 1rem;
+  }
 `
 
 const SocialRow = styled.div`
@@ -71,7 +75,7 @@ const SocialIcon = styled.a`
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.25s;
 
   &:hover {
@@ -86,7 +90,7 @@ const Col = styled.div``
 
 const ColTitle = styled.h4`
   font-family: ${({ theme }) => theme.fonts.body};
-  font-size: 0.65rem;
+  font-size: 1rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #fff;
@@ -102,7 +106,7 @@ const NavList = styled.ul`
 
 const NavItem = styled.li`
   a {
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
     transition: color 0.25s;
@@ -125,7 +129,7 @@ const ContactItem = styled.li`
   svg { color: ${({ theme }) => theme.colors.orange}; flex-shrink: 0; margin-top: 2px; }
 
   span {
-    font-size: 0.82rem;
+    font-size: 1rem;
     color: #fff;
     line-height: 1.55;
   }
@@ -140,7 +144,7 @@ const BottomBar = styled.div`
 `
 
 const Copyright = styled.p`
-  font-size: 0.72rem;
+  font-size: 1rem;
   color: #fff;
 `
 
@@ -148,7 +152,7 @@ const OrangeTag = styled.div`
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.65rem;
+  font-size: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.orange};
@@ -173,7 +177,7 @@ export default function Footer() {
             <LogoWrap>
               <LogoImage src="/LogoPreta.png" alt="Algodão Doce Noivas" />
             </LogoWrap>
-            <BrandDesc>Realizando sonhos, um vestido de cada vez. Mais de 20 anos de dedicação ao bem vestir.</BrandDesc>
+            <BrandDesc>Realizando sonhos, um vestido de cada vez. Mais de 30 anos de dedicação ao bem vestir.</BrandDesc>
             <SocialRow>
               <SocialIcon href="https://www.instagram.com/algodaodocenoivasitapira" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
@@ -212,7 +216,7 @@ export default function Footer() {
         </TopBar>
 
         <BottomBar>
-          <Copyright>© 2025 Algodão Doce Noivas. Todos os direitos reservados.</Copyright>
+          <Copyright>© {new Date().getFullYear()} Algodão Doce Noivas. Todos os direitos reservados.</Copyright>
           <OrangeTag>Itapira · SP</OrangeTag>
         </BottomBar>
       </Container>
