@@ -105,6 +105,7 @@ const ActionBlock = styled.div`
 const BtnPrimary = styled.a`
   display: flex;
   width: 100%;
+  box-sizing: border-box;
   align-items: center;
   gap: 16px;
   background: ${({ theme }) => theme.colors.orange};
@@ -140,6 +141,7 @@ const BtnPrimary = styled.a`
 const BtnSecondary = styled.a`
   display: flex;
   width: 100%;
+  box-sizing: border-box;
   align-items: center;
   gap: 16px;
   background: rgba(255,255,255,0.05);
@@ -177,6 +179,7 @@ const BtnSecondary = styled.a`
 const BtnTertiary = styled.a`
   display: flex;
   width: 100%;
+  box-sizing: border-box;
   align-items: center;
   gap: 16px;
   background: transparent;
@@ -256,7 +259,7 @@ export default function CTASection() {
             rel="noopener noreferrer"
           >
             <FaMapMarkerAlt />
-            R. Comendador João Cintra, 363" Centro, Itapira/SP
+            R. Comendador João Cintra, 363, Centro, Itapira/SP
           </BtnTertiary>
         </ActionBlock>
       </Container>
