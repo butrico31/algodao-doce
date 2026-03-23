@@ -99,13 +99,18 @@ const Schedule = styled.p`
 const ActionBlock = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
+
+  > a + a {
+    margin-top: 12px;
+  }
 `
 
 const BtnPrimary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
+  min-height: 86px;
   align-items: center;
   gap: 16px;
   background: ${({ theme }) => theme.colors.orange};
@@ -142,6 +147,7 @@ const BtnSecondary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
+  min-height: 86px;
   align-items: center;
   gap: 16px;
   background: rgba(255,255,255,0.05);
@@ -180,17 +186,18 @@ const BtnTertiary = styled.a`
   display: flex;
   width: 100%;
   box-sizing: border-box;
+  min-height: 86px;
   align-items: center;
   gap: 16px;
-  background: transparent;
+  background: rgba(255,255,255,0.03);
   color: #fff;
   font-family: ${({ theme }) => theme.fonts.body};
   font-size: 1rem;
   font-weight: 400;
-  padding: 16px 32px;
+  padding: 20px 32px;
   border-radius: 3px;
   text-decoration: none;
-  border: 1px solid rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
   transition: color 0.25s;
 
   &:hover { color: #fff; }
@@ -211,7 +218,7 @@ export default function CTASection() {
       })
       gsap.from(actionRef.current.children, {
         scrollTrigger: { trigger: actionRef.current, start: 'top 82%', toggleActions: 'play none none none' },
-        opacity: 0, x: 40, duration: 0.7, stagger: 0.1, ease: 'power3.out',
+        opacity: 0, y: 24, duration: 0.7, stagger: 0.1, ease: 'power3.out',
       })
     }, sectionRef)
     return () => ctx.revert()
