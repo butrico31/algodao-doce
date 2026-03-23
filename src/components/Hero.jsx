@@ -98,6 +98,7 @@ const Sub = styled.p`
   color: ${({ theme }) => theme.colors.textMedium};
   line-height: 1.8;
   max-width: 420px;
+  font-weight: bold;
   margin-bottom: 44px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
