@@ -162,10 +162,10 @@ const OccasionDesc = styled.p`
 `
 
 const occasions = [
-  { icon: FaHeart, title: 'Casamentos', count: '200+ opções', desc: 'Do vestido de noiva às madrinhas, temos o modelo certo para o grande dia.' },
-  { icon: FaGraduationCap, title: 'Formaturas', count: '150+ opções', desc: 'Elegância e estilo para celebrar essa conquista especial.' },
-  { icon: FaStar, title: 'Debutantes', count: '120+ opções', desc: 'Vestidos encantadores para tornar os 15 anos inesquecíveis.' },
-  { icon: FaCalendarAlt, title: 'Eventos Sociais', count: '80+ opções', desc: 'Para jantares, festas e ocasiões que pedem um look especial.' },
+  { icon: FaHeart, title: 'Casamentos', count: '400+ opções', desc: 'Do vestido de noiva às madrinhas, temos o modelo certo para o grande dia.' },
+  { icon: FaGraduationCap, title: 'Formaturas', count: '300+ opções', desc: 'Elegância e estilo para celebrar essa conquista especial.' },
+  { icon: FaStar, title: 'Debutantes', count: '240+ opções', desc: 'Vestidos encantadores para tornar os 15 anos inesquecíveis.' },
+  { icon: FaCalendarAlt, title: 'Eventos Sociais', count: '160+ opções', desc: 'Para jantares, festas e ocasiões que pedem um look especial.' },
 ]
 
 export default function OcasioesSections() {

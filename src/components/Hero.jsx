@@ -266,14 +266,11 @@ const TagPill = styled.div`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.14);
-  border: 1px solid rgba(255,255,255,0.28);
-  border-radius: 2px;
-  padding: 12px 22px;
+  padding: 0;
   max-width: min(92vw, 420px);
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
-    padding: 8px 12px;
+    padding: 0;
   }
 `;
 
@@ -323,10 +320,7 @@ const RightBadge = styled.div`
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(200,168,130,0.12);
-  border: 1px solid rgba(200,168,130,0.25);
-  border-radius: 2px;
-  padding: 12px 20px;
+  padding: 20px;
 `;
 
 const RightBadgeText = styled.div`
@@ -355,35 +349,6 @@ const RightBadgeText = styled.div`
       font-size: 1.05rem;
       letter-spacing: 1.2px;
     }
-  }
-`;
-
-/* �"?�"?�"? Decorative grid lines �"?�"?�"? */
-const GridLines = styled.div`
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    background: rgba(255,255,255,0.03);
-  }
-
-  &::before {
-    left: 33.33%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-  }
-
-  &::after {
-    left: 66.66%;
-    top: 0;
-    bottom: 0;
-    width: 1px;
   }
 `;
 
@@ -460,7 +425,6 @@ export default function Hero() {
 
       <Right ref={rightRef}>
         <HeroPhoto />
-        <GridLines />
         <BigLetter>A</BigLetter>
         <RightContent>
           <TagPill>
