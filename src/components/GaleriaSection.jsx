@@ -65,7 +65,7 @@ const SectionTitle = styled.h2`
 
 const SectionDesc = styled.p`
   font-family: ${({ theme }) => theme.fonts.subtitle};
-  font-size: 1.05rem;
+  font-size: 1.3rem;
   color: ${({ theme }) => theme.colors.textMedium};
   line-height: 1.8;
   align-self: end;

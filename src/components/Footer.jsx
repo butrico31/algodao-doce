@@ -216,7 +216,7 @@ export default function Footer() {
         </TopBar>
 
         <BottomBar>
-          <Copyright>© {new Date().getFullYear()} Algodão Doce Noivas. Todos os direitos reservados.</Copyright>
+          <Copyright>© {new Date().getFullYear()} Algodão Doce Noivas e Festas. Todos os direitos reservados.</Copyright>
           <OrangeTag>Itapira · SP</OrangeTag>
         </BottomBar>
       </Container>

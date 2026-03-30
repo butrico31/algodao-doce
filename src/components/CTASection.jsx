@@ -243,7 +243,7 @@ export default function CTASection() {
           <Eyebrow>Vamos conversar</Eyebrow>
           <Headline>Pronta para encontrar o seu vestido?</Headline>
           <Sub>Visite-nos e deixe nossas especialistas encontrarem o vestido perfeito para o seu momento.</Sub>
-          <Schedule>Segunda a Sábado · 9h às 18h</Schedule>
+          <Schedule>Segunda a sexta das 9:00 às 17:30 e sábado das 9:00 às 13:00</Schedule>
         </TextBlock>
 
         <ActionBlock ref={actionRef}>
